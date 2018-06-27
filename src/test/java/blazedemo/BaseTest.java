@@ -4,6 +4,7 @@ import Pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.logging.*;
 import org.testng.annotations.*;
+import utils.Variables;
 import utils.WebDriverManager;
 
 import java.io.FileWriter;
@@ -16,11 +17,9 @@ public  class BaseTest {
     public HomePage homePage;
 
     @BeforeClass
-    public void BeforeClass(){
-        //System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/FirstTest/chromedriver.exe");
+    public void BeforeClass() {
 
         driver = WebDriverManager.getInstance();
-
         homePage = new HomePage(driver);
     }
 
@@ -30,7 +29,7 @@ public  class BaseTest {
 
         LogEntries logEntries = driver.manage().logs().get(LogType.PERFORMANCE);
 
-       try(FileWriter writer = new FileWriter("./target/screenshots/traffic.txt", false))
+       try(FileWriter writer = new FileWriter(Variables.CatalogForScreenshots + "traffic.txt", false))
         {
             for (LogEntry entry : logEntries)
             {

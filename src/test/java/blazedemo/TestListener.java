@@ -14,16 +14,18 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult iTestResult) {
 
+        logger.info(iTestResult.getName() + " start!");
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-
+        logger.info(iTestResult.getName() + " success!");
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        TakeScreenShot.takeScreenShot(WebDriverManager.getInstance());
+        TakeScreenShot.takeScreenShot(WebDriverManager.getInstance(),iTestResult.getName());
+        logger.error(iTestResult.getName() + " failure!");
     }
 
     @Override

@@ -16,5 +16,15 @@ public class LogTest  extends BaseTest {
         homePage.enterToFind().click();
 
     }
+    @Test
+    public void testError()  {
+
+        driver.get("http://blazedemo.com/index.php");
+
+        SelectClass.SelectMetod(homePage.elementfromPortError(),"Boston");
+        SelectClass.SelectMetod(homePage.elementtoPort(),"Rome");
+        homePage.enterToFind().click();
+
+    }
 }
 
