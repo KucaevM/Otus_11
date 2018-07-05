@@ -5,6 +5,10 @@
     <test name="Regression">
         <classes>
             <class name="blazedemo.tests.LogTest"/>
-        </classes>
+       <methods>
+        <include name="test" />
+      </methods>
+
+        </classes> 
     </test>
 </suite>
