@@ -4,7 +4,7 @@
 
     <test name="Regression">
         <classes>
-            <class name="test.java.blazedemo.tests.LogTest"/>
+            <class name="blazedemo.tests.LogTest"/>
         </classes>
     </test>
 </suite>
