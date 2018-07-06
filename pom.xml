@@ -95,5 +95,14 @@
             </resource>
         </resources>
     </build>
-
+    <reporting>
+        <excludeDefaults>true</excludeDefaults>
+        <plugins>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>LATEST</version>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
